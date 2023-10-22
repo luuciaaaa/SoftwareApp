@@ -1,29 +1,71 @@
 package org.ulpgc.is1.model;
 
+/**
+ * Clase que representa un cliente.
+ * Almacena información sobre el nombre,
+ * el apellido y  el teléfono del cliente.
+ */
+
 public class Customer {
     private String name;
     private String surname;
     private Phone phone;
 
-    // Constructor de la clase Customer que recibe un nombre, un apellido y un objeto Phone como argumentos.
+    /**
+     * Constructor de la clase Customer.
+     * Recibe como argumento el nombre,
+     * el apellido y  el teléfono del cliente.
+     */
     public Customer(String name, String surname, Phone phone) {
-        this.name = name;       // Asigna el nombre proporcionado al atributo "name".
-        this.surname = surname; // Asigna el apellido proporcionado al atributo "surname".
-        this.phone = phone;     // Asigna el objeto Phone proporcionado al atributo "phone".
+        this.name = name;
+        this.surname = surname;
+        this.phone = phone;
     }
 
-    // Método que permite obtener el nombre del cliente.
+    /**
+     * Método para obtener el nombre del cliente.
+     */
     public String getName() {
         return name;
     }
 
-    // Método que permite obtener el apellido del cliente.
+    /**
+     * Método para establecer el nombre del cliente.
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * Método para obtener el apellido del cliente.
+     */
     public String getSurname() {
         return surname;
     }
 
-    // Método que permite obtener el objeto Phone del cliente.
-    public Phone getPhone() {
-        return phone;
+    /**
+     * Método para establecer el apellido del cliente.
+     */
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    /**
+     * Método para obtener el teléfono del cliente.
+     * Si el teléfono no es válido, se almacenará el valor:"XXXX".
+     */
+    public String getPhone() {
+        if (phone.isValid()) {
+            return phone.getNumber();
+        } else {
+            return "XXXX";
+        }
+    }
+
+    /**
+     * Método para establecer el teléfono del cliente.
+     */
+    public void setPhone(Phone phone) {
+        this.phone = phone;
     }
 }

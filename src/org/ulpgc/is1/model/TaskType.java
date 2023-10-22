@@ -1,10 +1,28 @@
 package org.ulpgc.is1.model;
 
-// Enumeración para representar diferentes tipos de tareas
+/**
+ * Clase enumeradora que representa los diferentes tipos de tareas en el proyecto.
+ */
 public enum TaskType {
-    Analysis,     // Tipo de tarea: Análisis
-    Design,       // Tipo de tarea: Diseño
-    Test,         // Tipo de tarea: Pruebas
-    Programming   // Tipo de tarea: Programación
+    /**
+     * Tarea de análisis.
+     */
+    Analysis,
+
+    /**
+     * Tarea de diseño.
+     */
+    Design,
+
+    /**
+     * Tarea de prueba.
+     */
+    Test,
+
+    /**
+     * Tarea de programación.
+     */
+    Programming
 }
+
 

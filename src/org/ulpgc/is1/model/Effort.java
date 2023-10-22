@@ -1,16 +1,33 @@
 package org.ulpgc.is1.model;
 
+/**
+ * Clase que representa el esfuerzo.
+ * Almacena información sobre la cantidad de esfuerzo realizado.
+ */
 public class Effort {
     private int amount;
 
-    // Constructor de la clase Effort que recibe la cantidad de esfuerzo como argumento.
+    /**
+     * Constructor de la clase Effort.
+     * Recibe como argumento la cantidad de esfuerzo realizado.
+     */
     public Effort(int amount) {
-        this.amount = amount; // Asigna el valor de esfuerzo proporcionado al atributo "amount".
+        this.amount = amount;
     }
 
-    // Método que permite obtener la cantidad de esfuerzo registrada.
+    /**
+     * Método que devuelve la cantidad de esfuerzo realizado.
+     */
     public int getAmount() {
         return amount;
     }
+
+    /**
+     * Método que establece la cantidad de esfuerzo realizado.
+     */
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
 }
+
 

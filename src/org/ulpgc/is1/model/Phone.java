@@ -1,23 +1,39 @@
 package org.ulpgc.is1.model;
 
-
+/**
+ * Clase que representa un teléfono.
+ */
 public class Phone {
-    private String number; // Aquí guardamos el número de teléfono
+    private String number;
 
-
+    /**
+     * Constructor de la clase Phone.
+     * Recibe como argumento el número de teléfono.
+     */
     public Phone(String number) {
-        this.number = number; // Configuramos el número cuando creamos un objeto Phone
+        this.number = number;
     }
 
-
+    /**
+     * Método para obtener el número de teléfono.
+     */
     public String getNumber() {
-        return number; // Obtenemos el número de teléfono
+        return number;
     }
 
+    /**
+     * Método que verifica si el número de teléfono es válido.
+     * Verifica si el número de teléfono tiene el formato "###-###-###".
+     * Si el número no es válido, se almacenará el valor "XXXX"
+     * y se devuelve 'false'.
+     */
 
     public boolean isValid() {
-        // Implementa la lógica para validar el número de teléfono
-        return true; // Por ahora, siempre asumimos que el número es válido
+        if (number.matches("\\d{3}-\\d{3}-\\d{3}")) {
+            return true;
+        } else {
+            this.number = "XXXX";
+            return false;
+        }
     }
 }
-
