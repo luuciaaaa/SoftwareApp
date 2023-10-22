@@ -100,3 +100,4 @@ public class Main {
         System.out.println("Número de clientes: " + projectManager.getCustomers().size());
     }
 }
+
